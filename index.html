@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report Diff for Data Studio</title>
+<meta name="description" content="See exactly what changed in your Data Studio (Looker Studio) report: chart-by-chart diff of fields, filters and data sources. Runs locally in your browser.">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1f23;--muted:#5d6370;--card:#ffffff;--line:#e4e1da;--accent:#1f6feb;--add:#e7f6ec;--add-fg:#1a7f37;--del:#fdecec;--del-fg:#b42318}
+@media (prefers-color-scheme:dark){:root{--bg:#14161a;--fg:#e8e6e1;--muted:#a3a8b3;--card:#1c1f24;--line:#2c3038;--accent:#58a6ff;--add:#12301d;--add-fg:#5fd17f;--del:#3a1717;--del-fg:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:760px;margin:0 auto;padding:56px 16px 72px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 16px;letter-spacing:-.01em}
+.lead{font-size:18px;color:var(--muted);margin:0 0 28px}
+.cta{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:8px}
+.cta:hover{filter:brightness(1.08)}
+.note{font-size:14px;color:var(--muted);margin-top:10px}
+.diff{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:40px 0;overflow:hidden;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.diff header{padding:10px 14px;border-bottom:1px solid var(--line);color:var(--muted)}
+.diff div{padding:2px 14px;white-space:pre-wrap;word-break:break-word}
+.diff .h{font-weight:600;padding-top:10px}
+.diff .a{background:var(--add);color:var(--add-fg)}
+.diff .d{background:var(--del);color:var(--del-fg)}
+h2{font-size:20px;margin:40px 0 12px}
+ul{padding-left:20px;margin:0}
+li{margin:6px 0}
+.price{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+footer{margin-top:48px;font-size:14px;color:var(--muted)}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>See exactly what changed in your Data Studio report.</h1>
+<p class="lead">Snapshot any Data Studio (Looker Studio) report, compare two snapshots, and get a page-by-page, chart-by-chart change list: dimensions, metrics, filters, data sources. Runs in your browser. Your report never leaves your machine.</p>
+<a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSe_ZCAZjHk0ARZndl8l4gYMtlMNQV6TRtsVSt2-ndgxpnqH8A/viewform">Join the early-access waitlist</a>
+<p class="note">Not built yet. We're checking whether enough people want it before we build it. The waitlist form has 3 short questions.</p>
+
+<section class="diff" aria-label="Example change list">
+<header>Example: “Client A — Monthly Overview”, snapshot Nov 3 vs Nov 17</header>
+<div class="h">Page 1 › “Sessions trend” (time series)</div>
+<div class="d">- Dimension: Date</div>
+<div class="a">+ Dimension: Year Month (drill-down enabled)</div>
+<div class="h">Page 1 › “Top countries” (geo map)</div>
+<div class="a">+ Filter: Country ≠ “(not set)”</div>
+<div class="h">Page 2 › “Channel table” (table)</div>
+<div class="d">- Data source: GA4 – Main property</div>
+<div class="a">+ Data source: GA4 – Main property (copy)</div>
+<div class="h" style="padding-bottom:10px">24 other charts unchanged</div>
+</section>
+
+<h2>Why</h2>
+<ul>
+<li><strong>Version history tells you who and when, not what.</strong> It doesn't show which chart, field or filter changed, and restoring rolls back the whole report.</li>
+<li><strong>Fix only what broke.</strong> Get a list of the few charts that changed and put them back by hand, without losing everyone else's edits.</li>
+<li><strong>100% local.</strong> No server account, no uploads. Snapshots are stored in your browser.</li>
+</ul>
+
+<h2>Planned pricing</h2>
+<div class="price">Early access: <strong>$9 per user per month</strong>, or <strong>$79 lifetime</strong> for the first 50 users. Nothing to pay now; the waitlist is free.</div>
+
+<h2>Who it's for</h2>
+<ul>
+<li>Agencies and analysts who maintain 10+ client reports</li>
+<li>Teams where several people edit the same reports</li>
+<li>Anyone who has asked “who changed this chart, and what did they change?”</li>
+</ul>
+
+<footer>
+<p>An independent project, not affiliated with Google. Data Studio and Looker Studio are trademarks of Google LLC.</p>
+<p>Questions or feedback: <a href="https://github.com/TomXiaoYZ/datastudio-diff/issues">open an issue on GitHub</a>.</p>
+</footer>
+</main>
+</body>
+</html>
