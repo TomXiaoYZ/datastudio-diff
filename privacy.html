@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme:dark)">
+<title>Privacy Policy — Report Diff for Data Studio</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1f23;--muted:#5d6370;--card:#ffffff;--line:#e4e1da;--accent:#1f6feb;--add:#e7f6ec;--add-fg:#1a7f37;--del:#fdecec;--del-fg:#b42318}
+@media (prefers-color-scheme:dark){:root{--bg:#14161a;--fg:#e8e6e1;--muted:#a3a8b3;--card:#1c1f24;--line:#2c3038;--accent:#58a6ff;--add:#12301d;--add-fg:#5fd17f;--del:#3a1717;--del-fg:#ff8a80}}
+:root{--body-font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--code-font:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--h1-size:clamp(28px,5vw,40px);--h2-size:20px;--heading-leading:1.2;--heading-tracking:-.01em;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-10:40px;--space-12:48px;--space-14:56px;--space-18:72px;--container:760px;--measure:75ch;--target:44px;--focus-width:2px}
+*{box-sizing:border-box}
+html{color-scheme:light dark;scrollbar-color:var(--muted) var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font:var(--body-font);overflow-wrap:break-word}
+main{max-width:var(--container);margin:0 auto;padding:var(--space-14) var(--space-4) var(--space-18);padding-left:max(var(--space-4),env(safe-area-inset-left));padding-right:max(var(--space-4),env(safe-area-inset-right))}
+h1{font-size:var(--h1-size);line-height:var(--heading-leading);margin:0 0 var(--space-4);letter-spacing:var(--heading-tracking);text-wrap:balance}
+h2{font-size:var(--h2-size);line-height:var(--heading-leading);margin:var(--space-10) 0 var(--space-3);text-wrap:balance}
+h1,h2{scroll-margin-top:var(--space-4)}
+p{max-width:var(--measure);margin:0 0 var(--space-4);text-wrap:pretty}
+.updated{color:var(--muted)}
+code{font-family:var(--code-font)}
+a{display:inline-block;min-height:var(--target);padding-block:var(--space-2);color:var(--muted);text-underline-offset:var(--space-1);touch-action:manipulation}
+@media (hover:hover){a:hover{color:var(--fg)}}
+a:active{color:var(--fg)}
+a:focus-visible{color:var(--fg);outline:var(--focus-width) solid var(--accent);outline-offset:var(--space-1)}
+footer{margin-top:var(--space-12)}
+::selection{background:var(--fg);color:var(--bg)}
+</style>
+</head>
+<body>
+<main>
+<article>
+<h1>Privacy Policy — Report Diff for Data Studio</h1>
+<p class="updated">Last updated: November 21, 2026</p>
+<p>Report Diff for Data Studio saves report-definition snapshots on your device and shows what changed between them. This policy explains what the extension reads, stores and sends.</p>
+
+<h2>Report definitions</h2>
+<p>The extension reads only report-definition responses that the Data Studio (Looker Studio) page itself loads through <code>getReport</code>, <code>createTempReport</code> and <code>getSchema</code>. Its content scripts do not read request bodies, send requests to Google, or modify the report or page content. Choosing "Snapshot now" reloads the tab so the page can load its own definition again.</p>
+<p>Snapshots can contain report, page and chart names; chart types; field names; filters; date-range and sort settings; data source names and identifiers; interactions; and styling properties. The extension does not read or store the data values shown in charts. Google account identifiers are removed when report definitions are normalized into snapshots.</p>
+
+<h2>Local storage and deletion</h2>
+<p>Report snapshots and extension settings are stored only in local extension storage in your browser on your device. Report definitions are not sent to the developer, ExtensionPay, Stripe or any other server. Snapshots are not synchronized between devices or shared with teammates.</p>
+<p>You can delete saved report snapshots using "Clear all data" in Settings. Uninstalling the extension removes its local extension storage, including settings. Downloaded inventories and change lists are files you choose to save; deleting the extension does not delete those files.</p>
+
+<h2>Anonymous usage count</h2>
+<p>Anonymous usage count is <strong>off by default</strong>. It sends nothing unless you explicitly enable it in Settings and a counting address is configured in the extension. Version 0.1.0 has no counting address configured, so it sends no usage counts even if you enable the setting.</p>
+<p>When enabled and configured, the first inventory download sends a single request containing only the event name (<code>inventory_download</code>) and the extension version. The request contains no user or installation identifier, report identifier, report data, email address or cookies. A local marker prevents further counts for that installation. Failed requests are not retried. You can turn the setting off at any time; doing so does not affect downloads. There is no other usage analytics, advertising or error reporting.</p>
+
+<h2>Payments and paid status</h2>
+<p>If you buy Pro or sign in to restore a purchase, ExtensionPay (<a href="https://extensionpay.com">https://extensionpay.com</a>) and Stripe (<a href="https://stripe.com">https://stripe.com</a>) handle the payment and email information under their own privacy policies. Card details are entered in their payment flow, not stored in report snapshots or handled by the extension's report features.</p>
+<p>When the side panel opens, the extension contacts ExtensionPay to check whether you have paid. The bundled ExtensionPay library also handles payment completion and sign-in. Paid status is cached locally so the extension can apply the appropriate plan. Report definitions are never included in these requests.</p>
+<p>The developer can access paying users' email addresses and payment status through ExtensionPay to provide the purchase and respond to support requests. This information is not used for advertising or unrelated tracking. Review the providers' privacy policies in their payment and sign-in flows.</p>
+
+<h2>Data use</h2>
+<p>We do not sell personal information or report data. Data is used only to provide the extension's stated functionality, process and restore purchases, and respond to support requests. Payment providers process the information needed for those services. Report data is not transferred to them.</p>
+
+<h2>Limited Use</h2>
+<p>The use of information received from Google APIs and Google web pages adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+<h2>Contact</h2>
+<p>For privacy questions or support, contact <a href="mailto:tom.xiao@hotmail.com">tom.xiao@hotmail.com</a>.</p>
+</article>
+<footer><a href="index.html">Back to home</a></footer>
+</main>
+</body>
+</html>
